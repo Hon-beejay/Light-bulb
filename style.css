@@ -1,0 +1,71 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: red;
+}
+
+.a {
+    background-color: white;
+    width: 400px;
+    height: 100vh;
+    height: fit-content;
+    margin: auto;
+    /* padding: 100px; */
+    padding-left: 100px;
+    /* line-height: 100px; */
+    /* position: relative; */
+}
+
+.img {
+    width: 300px;
+    height: 300px;
+    padding: 2px;
+    margin: auto;
+    margin-bottom: 10px;
+    background: url(pic_bulboff.gif);
+    background-repeat: no-repeat;
+    background-size: contain;
+    transition: all 0.1s ease;
+}
+
+p {
+    width: 100px;
+    height: 30px;
+    background: brown;
+    border: 0;
+    color: white;
+    text-align: center;
+    cursor: pointer;
+    padding: 5px;
+    margin: auto;
+    margin-left: 35px;
+    /* position: fixed;
+    bottom: 200px; */
+}
+
+label>p:active {
+    background-color: yellow;
+    color: black;
+}
+
+#ON:checked + label .img {
+    background-image: url(pic_bulbon.gif);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+input {
+    display: none;
+}
+
+label>p::before{
+    content: "ON";
+}
+
+#ON:checked + label>p::before{
+    content: "OFF";
+}
